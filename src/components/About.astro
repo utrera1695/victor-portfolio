@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'; 
+import me from '../assets/images/victor_utrera.png'
+---
+<section class="min-h-screen flex flex-col justify-center">
+    <div class="container flex justify-between items-center py-32">
+        <div class="relative w-[29rem] hidden md:block">
+            <div class="absolute z-10 bg-dark w-96 h-96 left-[39px] bottom-0 rounded-full"></div>
+            <Image  src={me} alt="" class="relative rounded-[50%] z-20 min-w-[29rem]"></Image>
+        </div>
+        <div>
+            <h6 class="text-primary">About Me</h6>
+            <h3>FullStack Developer</h3>
+            <p>More 5 years now experiencie working of developer. I have been a frontend and backend leader on different occasions.  computer engineering student. residence in Venezuela</p>
+            <div class="flex items-center gap-4 my-4">
+                <button class="my-4">Download mi CV</button>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-github"></i>
+                </a>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</section>

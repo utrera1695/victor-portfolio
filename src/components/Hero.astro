@@ -1,0 +1,155 @@
+---
+import { Image } from 'astro:assets'; 
+import me from '../assets/images/victor_utrera_3.png'
+import '../assets/styles/stars.css'
+---
+<section class="hero relative bg-dark min-h-screen flex flex-col justify-center">
+    <div class="container md:mx-auto relative flex justify-between items-center">
+        <div class="z-20">
+            <h5 class="text-primary ">Hey! I am</h5>
+            <h1 class="title uppercase text-8xl text-white">Victor</h1>
+            <h1 class="title uppercase text-8xl text-white">Utrera</h1>
+            <h3 class="text-current">Software Developer </h3>
+            <div class="flex items-center gap-4 my-4">
+                <button class="my-4">Download mi CV</button>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-github"></i>
+                </a>
+                <a href="">
+                    <i class="text-3xl fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="relative hidden md:flex justify-center">
+            
+            <div class="gradient"></div>
+        </div>
+    </div>
+    <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</section>
+<style>
+.hero {
+    overflow: hidden;
+}
+.gradient {
+  --size: 250px;
+  --speed: 50s;
+    z-index: 10;
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(#6f22e9, #55cff5, #cf22cf, #6accfb);
+    
+    background-size: 400% 400%;
+    transition: all ease 3s;
+    animation: rotate var(--speed) ease alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    background-position: 0% 0%;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: rotate(180deg);
+    background-position: 100% 100%;
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+        background-position: 0% 0%;
+        transform: scale(0.5);
+        
+    transform: rotate(360deg);
+    }
+}
+
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+}
+
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #6f22e9;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #6f22e9;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+</style>

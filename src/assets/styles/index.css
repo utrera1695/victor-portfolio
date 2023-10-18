@@ -1,0 +1,46 @@
+:root {
+    --main-gray: #363949;
+    --ligth-gray: #575757;
+    --primary-color: #A60AC7;
+    --button-color: #402166;
+    --button-accent: #5D3974;
+    --background: #221A37;
+}
+/* #cf22cf  #6accfb #7124eb #f24858 #55cff5 */
+html {
+    font-family: 'Montserrat', sans-serif;
+    background: #fefefe;
+    background-size: 224px;
+    color: var(--ligth-gray);
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    color: #363949;
+    line-height: normal;
+}
+p {
+    color: var(--ligth-gray);
+    line-height: normal;
+}
+a {
+    transition: all ease .3s;
+}
+a:hover {
+    color: var(--primary-color)
+}
+button {
+    background-color: var(--button-color);
+    border-radius: 50px;
+    padding: 10px 32px;
+    color: white;
+    transition: all ease .3s;
+}
+button:hover {
+    background-color: var(--button-accent);
+}
+button:active {
+    transform: scale(.9);
+}

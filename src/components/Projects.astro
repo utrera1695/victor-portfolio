@@ -1,0 +1,14 @@
+---
+import CardProject from "./CardProject.astro";
+import {projects} from '../constants/project'
+---
+
+<section class="min-h-screen flex flex-col justify-center">
+    <div class="container">
+        <h2 class="text-center">Some projects</h2>
+        <div class="flex gap-4">
+            {projects.map((project)=><CardProject name={project.name} type={project.type} image={project.images[0]}></CardProject>)}
+            
+        </div>
+    </div>
+</section>
